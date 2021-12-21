@@ -304,7 +304,7 @@ module Statesman
         return nil if column.nil?
 
         [
-          column, ::ActiveRecord::Base.default_timezone == :utc ? Time.now.utc : Time.now
+          column, ::ActiveRecord.default_timezone == :utc ? Time.now.utc : Time.now
         ]
       end
 
